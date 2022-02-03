@@ -1,0 +1,254 @@
+@import "../../util/colors";
+
+#nav {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#nav .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    position: relative;
+
+    .logo {
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            svg {
+                width: 1.4rem;
+                height: auto;
+            }
+
+            h1 {
+                color: $black;
+                margin-left: 1rem;
+                font-size: 1.7rem;
+                font-weight: 400;
+                display: none;
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 1s ease;
+        z-index: 10;
+
+        &.active {
+            transform: translateY(0);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .nav-link {
+                margin: 0.7rem 0;
+                text-align: center;
+
+                a {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .hamburger {
+        cursor: pointer;
+        z-index: 11;
+
+        svg path {
+            fill: red;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    #nav .nav {
+        .navigation {
+            .nav-links {
+                .nav-link {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #nav .nav {
+        .navigation {
+            .nav-links {
+                .nav-link {
+                    a {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #nav .nav {
+        padding: 1rem 2rem;
+
+        .logo {
+            a {
+                svg {
+                    width: 1.2rem;
+                }
+
+                h1 {
+                    font-size: 1.4rem;
+                    display: flex;
+                }
+            }
+        }
+
+        .navigation {
+            position: relative;
+            width: initial;
+            height: initial;
+            display: initial;
+            transform: translateY(0);
+            transition: none;
+
+            .nav-links {
+                flex-direction: row;
+
+                .nav-link {
+                    margin: 0 2rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-size: .85rem;
+                    }
+
+                    &.link-pink {
+                        a {
+                            color: $main;
+                        }
+                    }
+
+                    &.link-blue {
+                        a {
+                            color: $main;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #nav .nav {
+        .logo {
+            a {
+                svg {
+                    width: 1.3rem;
+                }
+
+                h1 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .navigation {
+            .nav-links {
+                .nav-link {
+                    a {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #nav .nav {
+        .logo {
+            a {
+                svg {
+                    width: 1.4rem;
+                }
+
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .navigation {
+            .nav-links {
+                .nav-link {
+                    a {
+                        font-size: .95rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #nav .nav {
+        .logo {
+            a {
+                svg {
+                    width: 1.4rem;
+                }
+
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .navigation {
+            .nav-links {
+                .nav-link {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {}
+
+@media only screen and (min-width: 1600px) {}

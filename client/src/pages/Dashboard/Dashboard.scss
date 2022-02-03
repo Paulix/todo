@@ -1,0 +1,14 @@
+.dashboard {
+    .logo a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+}
